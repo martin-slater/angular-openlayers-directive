@@ -61,6 +61,7 @@
   "scripts": {
     "test": "grunt build && grunt karma:unit",
     "build": "grunt build",
+    "preinstall": "npm run build",
     "prepublish": "npm run build",
     "postpublish": "publish-latest",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
