@@ -187,7 +187,7 @@ angular.module('openlayers-directive').factory('olHelpers', function($q, $log, $
     };
 
     var isValidStamenLayer = function(layer) {
-        return ['watercolor', 'terrain', 'toner'].indexOf(layer) !== -1;
+        return ['watercolor', 'terrain', 'toner', 'terrain-labels'].indexOf(layer) !== -1;
     };
 
     var createSource = function(source, projection) {
