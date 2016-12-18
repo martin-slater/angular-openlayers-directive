@@ -1821,9 +1821,10 @@ angular.module('openlayers-directive').factory('olHelpers', ["$q", "$log", "$htt
                 var extractStyles = source.extractStyles || false;
                 oSource = new ol.source.Vector({
                     url: source.url,
-                    format: new ol.format.KML(),
+                    format: new ol.format.KML({
+                        extractStyles: extractStyles
+                    }),
                     radius: source.radius,
-                    extractStyles: extractStyles
                 });
                 break;
             case 'Stamen':
