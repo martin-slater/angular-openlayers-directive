@@ -327,7 +327,7 @@ angular.module('openlayers-directive').directive('olMarker', function($log, $q, 
                             map.getTarget().style.cursor = 'pointer';
                         }
 
-                        if (!found && label) {
+                        if (!found && label && !properties.label.permanent) {
                             actionTaken = true;
                             label = undefined;
                             map.getTarget().style.cursor = '';
