@@ -958,7 +958,7 @@ angular.module('openlayers-directive').directive('olMarker', ["$log", "$q", "olM
                             map.getTarget().style.cursor = 'pointer';
                         }
 
-                        if (!found && label) {
+		        if (!found && label && !properties.label.permanent) {
                             actionTaken = true;
                             map.removeOverlay(label);
                             label = undefined;
